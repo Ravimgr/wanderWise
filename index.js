@@ -30,19 +30,16 @@ consentForm.addEventListener('submit', (e) => {
     setTimeout(function(){
      document.getElementById('modal-inner').innerHTML = `
         <h3>Thanks <span class="modal-display-name">${fullName}</span>, we have received your message</h3>
-        <p class="modal-display-text">We will get back to you shortly</p>
-        <div class="close-wrapper">
-            <button class="modal-close" id ="close-btn">Close</button>
-        </div>`
+        <p class="modal-display-text">We will get back to you shortly</p> `
 
     },3000)
 
+    setTimeout(function(){
+        close()
+        modal.style.display = 'none'
+    },4500)
 
 
-})
 
-
-document.getElementById('close-btn').addEventListener('click', () => {
-     modal.style.display = 'none'
 })
 
