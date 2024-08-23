@@ -3,11 +3,17 @@ const chatBox = document.getElementById('chatbox')
 const  modal  = document.getElementById('modal')
 const consentForm = document.getElementById('consent-form')
 const modalText = document.getElementById('modal-text')
+const cancelBtn = document.getElementById('decline-btn')
 
 chatBox.addEventListener('click', () => {
      modal.style.display = 'inline'
     
 })
+
+cancelBtn.addEventListener('click', () => {
+     modal.style.display = 'none'
+})
+
 
 
 consentForm.addEventListener('submit', (e) => {
@@ -39,3 +45,4 @@ consentForm.addEventListener('submit', (e) => {
 document.getElementById('close-btn').addEventListener('click', () => {
      modal.style.display = 'none'
 })
+
